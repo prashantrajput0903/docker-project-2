@@ -8,6 +8,16 @@ on:
         required: true
         default: "main"
         type: string
+      environment:
+        description: "Select environment (dev, staging, prod)"
+        required: true
+        default: "dev"
+        type: choice
+        options:
+          - main
+          - dev
+          - staging
+          - prod
 
 jobs:
   build:
