@@ -1,7 +1,7 @@
 # -----------------------
 # Stage 1: Build the project
 # -----------------------
-FROM eclipse-temurin:17-jdk-alpine AS build
+FROM maven:3.9.3-eclipse-temurin-17-alpine AS build
 
 # Set working directory
 WORKDIR /usr/src/app
@@ -11,7 +11,7 @@ COPY pom.xml .
 COPY src ./src
 
 # Build the project
-RUN ./mvnw clean package -DskipTests
+RUN mvn clean package -DskipTests
 
 # -----------------------
 # Stage 2: Create runtime image
