@@ -52,5 +52,5 @@ jobs:
       uses: docker/build-push-action@v6
       with:
         push: true
-        tags: prashant/dockerproject-2:latest
+        tags: prashant0903/dockerproject-2:latest
 
